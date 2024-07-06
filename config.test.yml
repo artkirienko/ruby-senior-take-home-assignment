@@ -1,8 +1,15 @@
 persistence:
   pg_url: postgresql://vandelay_app:secret@postgres-test:5432/vandelay_test
+  redis:
+    redis_url: redis://redis:6379/0
+    expires_in: 600
 integrations:
   vendors:
     one:
       api_base_url: mock_api_one:80
+      auth_token_endpoint: /auth/1
+      patient_records_endpoint: /patients
     two:
       api_base_url: mock_api_two:80
+      auth_token_endpoint: /auth_tokens/1
+      patient_records_endpoint: /records

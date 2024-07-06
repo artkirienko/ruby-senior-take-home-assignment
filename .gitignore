@@ -57,3 +57,4 @@ build-iPhoneSimulator/
 
 /postgres-data
 /postgres-data-test
+/redis-data
