@@ -22,7 +22,7 @@ module Vandelay
         end
       end
 
-      def to_json(_opts)
+      def to_json(_opts = nil)
         JSON.dump(self.to_h)
       end
 
