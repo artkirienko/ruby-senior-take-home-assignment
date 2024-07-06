@@ -44,6 +44,8 @@ services:
   redis:
     container_name: redis
     image: redis:latest
+    volumes:
+      - ./redis-data:/data
     ports:
       - '6387:6379'
     restart: unless-stopped
@@ -60,7 +62,7 @@ services:
     container_name: mock_api_two
     image: clue/json-server
     volumes:
-      - ./externals/mock_api_one:/data
+      - ./externals/mock_api_two:/data
     ports:
       - "3061:80"
 
